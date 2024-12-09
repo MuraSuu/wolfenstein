@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file,CMakeFiles/raycaster.dir/link.d CMakeFiles/raycaster.dir/src/SDL_Manager.cc.o CMakeFiles/raycaster.dir/src/main.cc.o -o raycaster  -Wl,-rpath,/usr/local/lib /usr/local/lib/libSDL2.so -Wl,-rpath,/usr/local/lib -Wl,--enable-new-dtags
