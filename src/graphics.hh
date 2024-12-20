@@ -1,14 +1,18 @@
 #ifndef GRAPHICS_HH
 #define GRAPHICS_HH
 
-#include "SDL2/SDL_render.h"
-#include <array>
+#include <SDL_render.h>
+
 #include <cstdlib>
 #include <cmath>
+#include <cstdlib>
+#include <utility>
 
-constexpr int MAP_SIZE = 24;
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
+const int MAP_SIZE = 24;
 
-std::array<std::array<int, MAP_SIZE>, MAP_SIZE> map
+const int map[MAP_SIZE][MAP_SIZE] = 
 {
   1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
   1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
@@ -36,9 +40,9 @@ std::array<std::array<int, MAP_SIZE>, MAP_SIZE> map
   1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 };
 
-void RayCast(SDL_Renderer* render, const std::pair<double, double>& player, 
-                const std::pair<double,double> camera_dir);
-
+void RayCast(SDL_Renderer*, const std::pair<double, double>&, 
+                            const std::pair<double, double>&,
+                            const std::pair<double, double>&);
 
 #endif
 
