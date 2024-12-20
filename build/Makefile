@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -153,6 +156,30 @@ src/SDL_Manager.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/SDL_Manager.cc.s
 .PHONY : src/SDL_Manager.cc.s
 
+src/graphics.o: src/graphics.cc.o
+.PHONY : src/graphics.o
+
+# target to build an object file
+src/graphics.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/graphics.cc.o
+.PHONY : src/graphics.cc.o
+
+src/graphics.i: src/graphics.cc.i
+.PHONY : src/graphics.i
+
+# target to preprocess a source file
+src/graphics.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/graphics.cc.i
+.PHONY : src/graphics.cc.i
+
+src/graphics.s: src/graphics.cc.s
+.PHONY : src/graphics.s
+
+# target to generate assembly for a file
+src/graphics.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/raycaster.dir/build.make CMakeFiles/raycaster.dir/src/graphics.cc.s
+.PHONY : src/graphics.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -189,6 +216,9 @@ help:
 	@echo "... src/SDL_Manager.o"
 	@echo "... src/SDL_Manager.i"
 	@echo "... src/SDL_Manager.s"
+	@echo "... src/graphics.o"
+	@echo "... src/graphics.i"
+	@echo "... src/graphics.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
