@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/raycaster.dir/link.d"
   "CMakeFiles/raycaster.dir/src/SDL_Manager.cc.o"
   "CMakeFiles/raycaster.dir/src/SDL_Manager.cc.o.d"
+  "CMakeFiles/raycaster.dir/src/graphics.cc.o"
+  "CMakeFiles/raycaster.dir/src/graphics.cc.o.d"
   "CMakeFiles/raycaster.dir/src/main.cc.o"
   "CMakeFiles/raycaster.dir/src/main.cc.o.d"
   "raycaster"
