@@ -1,7 +1,7 @@
 #include "graphics.hh"
 
 void RayCast(SDL_Renderer* render, const std::pair<double, double>& dir, 
-                const std::pair<double,double> camera_plane,
+                const std::pair<double,double>& camera_plane,
                 const std::pair<double, double>& player_pos)
 {
     std::pair<double, double> ray_dir;
@@ -80,8 +80,6 @@ void RayCast(SDL_Renderer* render, const std::pair<double, double>& dir,
         if(side == false) perp_wall_dist = side_dist_x - delta_dist_x;
         else perp_wall_dist = side_dist_y - delta_dist_y;
 
-
-
         //SDL works with integers.
         int line_height = static_cast<int>(SCREEN_HEIGHT / perp_wall_dist);
 
@@ -89,7 +87,7 @@ void RayCast(SDL_Renderer* render, const std::pair<double, double>& dir,
         int draw_start = std::max(0, -line_height / 2 + SCREEN_HEIGHT / 2);
         int draw_end = std::min(SCREEN_HEIGHT - 1, line_height / 2 + SCREEN_HEIGHT / 2);
 
-        SDL_Color color;
+        SDL_Color color {0,0,0,0xFF};
         switch(map[map_pos.first][map_pos.second])
         {
             case 1:  color.r = 255;  break; //red

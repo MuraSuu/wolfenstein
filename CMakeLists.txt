@@ -13,7 +13,13 @@ include_directories(raycaster ${SDL2_INCLUDE_DIRS})
 message(STATUS "SDL2 include dirs: ${SDL2_INCLUDE_DIRS}")
 message(STATUS "SDL2 libraries: ${SDL2_LIBRARIES}")
 
-file(GLOB SOURCES "src/*.cc")
+add_compile_options(-Wall -Wextra -Wpedantic -Werror=return-type)
+
+set(SOURCES 
+    src/graphics.cc
+    src/main.cc
+    src/SDL_Manager.cc
+)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
