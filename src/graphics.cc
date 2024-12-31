@@ -21,7 +21,6 @@ void RayCast(SDL_Renderer* render, const std::pair<double, double>& dir,
         double delta_dist_x = std::fabs(1/ray_dir.first);
         double delta_dist_y = std::fabs(1/ray_dir.second);
         
-
         //what direction to step in x or y-direction (either +1 or -1)
         int step_x = 0;
         int step_y = 0;
@@ -94,7 +93,7 @@ void RayCast(SDL_Renderer* render, const std::pair<double, double>& dir,
             case 2:  color.g = 255;  break; //green
             case 3:  color.b = 255;   break; //blue
             case 4:  color = {255, 255,255, 255};  break; //white
-            default: color = {255, 255, 0, 0}; break; //yellow
+            default: color = {255, 251, 0, 255}; break; //yellow
         }
 
         //give x and y sides different brightness

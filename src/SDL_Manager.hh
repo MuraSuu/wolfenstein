@@ -17,9 +17,6 @@ struct SDL_Manager
     
     SDL_Manager(const char* name, int width, int height);
     ~SDL_Manager();
-    
-    void Update();
-    bool ProcessInput();
 };
 
 #endif
